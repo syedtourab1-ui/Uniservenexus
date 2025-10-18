@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uniserve Nexus | Operational Diligence & Assured Growth</title>
+    
+    <!-- Load Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configure Tailwind for new Digital Dark palette and font -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-dark': '#040404', /* Deepest Black for main background */
+                        'secondary-dark': '#101010', /* Slightly Lighter Dark for contrasting sections/cards */
+                        'accent-blue': '#00BFFF', /* Electric Blue for digital glow/accents */
+                        'text-light': '#F0F0F0', /* Light text on dark backgrounds */
+                        'text-muted': '#A0A0A0', /* Subtle gray text */
+                        'highlight-blue': '#33FFFF', /* Brightest Blue for highlighting the company name/key features */
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- Custom Styles for Scrollbar, Digital Effects, and Animation -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        /* Utility to hide scrollbar while maintaining scroll functionality */
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* Keyframe Animation for subtle, moving background effect */
+        @keyframes matrix-flow {
+            0% { background-position: 0 0; }
+            100% { background-position: -200px -200px; }
+        }
+
+        /* Keyframe for pulsating CTA button shadow */
+        @keyframes pulse-shadow {
+            0%, 100% { box-shadow: 0 0 15px rgba(0, 191, 255, 0.5); }
+            50% { box-shadow: 0 0 40px rgba(0, 191, 255, 0.8), 0 0 10px rgba(0, 191, 255, 1); }
+        }
+
+        /* --- UNIQUE DATA MATRIX BACKGROUND --- */
+        .hero-matrix {
+            position: relative;
+            background-color: #040404;
+            overflow: hidden;
+        }
+
+        .hero-matrix::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300%; 
+            height: 300%;
+            opacity: 0.05;
+            background-image: repeating-linear-gradient(
+                -45deg,
+                #00BFFF 0,
+                #00BFFF 1px,
+                transparent 1px,
+                transparent 20px 
+            ),
+            repeating-linear-gradient(
+                45deg,
+                #00BFFF 0,
+                #00BFFF 1px,
+                transparent 1px,
+                transparent 20px
+            );
+            background-size: 200px 200px;
+            animation: matrix-flow 60s linear infinite;
+        }
+        /* ------------------------------------- */
+
+        .cta-pulse {
+            animation: pulse-shadow 2.5s infinite ease-in-out;
+        }
+
+        /* Enhanced Digital Glow Effect for Service Cards */
+        .card-glow {
+            border: 1px solid transparent;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); 
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+        }
+
+        .card-glow:hover {
+            border-color: #00BFFF; 
+            box-shadow: 0 0 20px rgba(0, 191, 255, 0.6), 0 0 40px rgba(0, 191, 255, 0.2); 
+            transform: translateY(-4px); 
+        }
+    </style>
+</head>
+<body class="font-sans bg-primary-dark text-text-light">
+
+    <!-- 1. Hero Section (Digital Focus with Animated Background) -->
+    <section id="home" class="hero-matrix text-white py-24 md:py-40 relative border-b border-accent-blue/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-accent-blue mb-4 opacity-80">
+                Operational Diligence & Dedicated Management
+            </p>
+            <h1 class="text-4xl sm:text-6xl lg:text-[4.8rem] font-extrabold mb-5 leading-tight tracking-tighter">
+                <span class="text-accent-blue">The Motherhood of</span> Operations.
+            </h1>
+            <h2 class="text-xl md:text-2xl font-light mb-10 max-w-5xl mx-auto text-text-muted">
+                <span class="font-bold text-2xl text-highlight-blue mr-1">Uniserve Nexus</span> provides *Operational Diligence*, caring for your most complex processes with the guaranteed commitment, stability, and growth focus of a dedicated parent.
+            </h2>
+            <a href="#overview" class="inline-block px-12 py-4 bg-accent-blue hover:bg-blue-500 text-primary-dark font-bold text-lg rounded-full transition duration-300 transform hover:scale-105 cta-pulse">
+                See Our Nurturing Model
+            </a>
+        </div>
+    </section>
+
+    <!-- 2. Company Overview (Managed Partnership & Profit Model) -->
+    <section id="overview" class="py-16 md:py-24 bg-secondary-dark border-b border-accent-blue/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-extrabold mb-6 text-text-light text-center">
+                Our Core Mission: <span class="text-accent-blue">The Commitment of Care</span>
+            </h2>
+            <div class="max-w-5xl mx-auto text-lg text-text-light space-y-8">
+                <p>
+                    <span class="font-semibold text-highlight-blue">Uniserve Nexus</span> partners with you, taking full responsibility for the meticulous *management and growth* of your critical business processes. Just as a mother nurtures a child, we bring relentless care, stability, and foresight to your operations. This partnership guarantees that while your team focuses on strategy, we ensure the process itself is constantly optimized, protected, and evolving toward maximum profitability.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-bold text-accent-blue">Focus 1: Stable, Dedicated Nurturing</h3>
+                        <ul class="list-disc list-inside text-text-muted space-y-2 pl-4">
+                            <li>*Unwavering Diligence:* We manage the process end-to-end with the attention to detail required for zero errors and sustained quality.</li>
+                            <li>*Dedicated Talent:* Deploying specialized, highly trained teams who treat your process as their own responsibility.</li>
+                            <li>*Protective Oversight:* Implementing robust security and compliance to shield your operations from risk.</li>
+                        </ul>
+                    </div>
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-bold text-accent-blue">Focus 2: Optimization for Profit & Assured Growth</h3>
+                        <ul class="list-disc list-inside text-text-muted space-y-2 pl-4">
+                            <li>*Continuous Improvement:* Applying Lean and AI methods to iteratively make the process more cost-effective and faster.</li>
+                            <li>*Performance Accountability:* Our partnership structure links our success to the efficiency and profit gains we deliver back to you.</li>
+                            <li>*Scalability Blueprint:* Future-proofing the operation to easily handle rapid growth without sacrificing quality.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <blockquote class="border-l-4 border-accent-blue pl-6 py-3 italic text-text-light text-xl font-medium mt-8 bg-primary-dark rounded-r-lg shadow-xl shadow-accent-blue/10">
+                    “Trust is earned through *Diligence*. We operate as the dedicated backbone of your business—the mother of your process—ensuring every function is nurtured for maximum stability and profitability.”
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Services Section with Dynamic Horizontal Scroll (High-Tech Styling) -->
+    <section id="services" class="py-16 md:py-20 bg-primary-dark border-b border-accent-blue/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-4 text-text-light">
+                Our Core Pillars: <span class="text-accent-blue">Solutions Engineered for Success</span>
+            </h2>
+            <p class="text-center text-lg max-w-3xl mx-auto mb-12 text-text-muted">
+                Explore our specialized services. Use the controls or *scroll right* to see how we deliver intelligence and efficiency.
+            </p>
+
+            <!-- Carousel Controls -->
+            <div class="flex justify-end gap-4 mb-6">
+                <button id="prev-service" class="p-3 rounded-full bg-secondary-dark text-accent-blue hover:bg-gray-800 transition duration-300 shadow-xl border border-accent-blue/30">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                </button>
+                <button id="next-service" class="p-3 rounded-full bg-secondary-dark text-accent-blue hover:bg-gray-800 transition duration-300 shadow-xl border border-accent-blue/30">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+            </div>
+
+            <!-- Scrollable Container (Flex with overflow-x) -->
+            <div id="service-container" class="flex overflow-x-scroll snap-x snap-mandatory pb-6 space-x-6 lg:space-x-8 scrollbar-hide">
+                
+                <!-- Service Card 1: Managed Process Transition (Refined) -->
+                <div class="flex-none w-11/12 sm:w-80 lg:w-96 p-5 snap-center bg-secondary-dark rounded-xl card-glow">
+                    <img src="https://placehold.co/400x250/101010/00BFFF?text=DILIGENT+TRANSITION" onerror="this.onerror=null; this.src='https://placehold.co/400x250/101010/00BFFF?text=DILIGENT+TRANSITION';" alt="Managed Process Transition" class="w-full h-auto rounded-lg mb-4 object-cover border border-accent-blue/20">
+                    <h3 class="text-xl font-bold mb-2 text-accent-blue">1. Diligent Process Transition</h3>
+                    <p class="text-sm text-text-muted">Seamless hand-off of operational responsibilities, guaranteeing continuous service and immediate stability through diligent management.</p>
+                </div>
+
+                <!-- Service Card 2: AI-Driven Optimization -->
+                <div class="flex-none w-11/12 sm:w-80 lg:w-96 p-5 snap-center bg-secondary-dark rounded-xl card-glow">
+                    <img src="https://placehold.co/400x250/101010/00BFFF?text=AI+ASSURED+GROWTH" onerror="this.onerror=null; this.src='https://placehold.co/400x250/101010/00BFFF?text=AI+ASSURED+GROWTH';" alt="AI-Driven Optimization" class="w-full h-auto rounded-lg mb-4 object-cover border border-accent-blue/20">
+                    <h3 class="text-xl font-bold mb-2 text-accent-blue">2. AI-Driven Assured Growth</h3>
+                    <p class="text-sm text-text-muted">Utilizing machine learning and data science for continuous optimization, transforming the process into a reliable profit center.</p>
+                </div>
+
+                <!-- Service Card 3: New Market Infrastructure -->
+                <div class="flex-none w-11/12 sm:w-80 lg:w-96 p-5 snap-center bg-secondary-dark rounded-xl card-glow">
+                    <img src="https://placehold.co/400x250/101010/00BFFF?text=INFRASTRUCTURE+OVERSIGHT" onerror="this.onerror=null; this.src='https://placehold.co/400x250/101010/00BFFF?text=INFRASTRUCTURE+OVERSIGHT';" alt="Global Infrastructure" class="w-full h-auto rounded-lg mb-4 object-cover border border-accent-blue/20">
+                    <h3 class="text-xl font-bold mb-2 text-accent-blue">3. Global Infrastructure Oversight</h3>
+                    <p class="text-sm text-text-muted">Providing secure, compliant, and scalable infrastructure, with all legal and regulatory burdens expertly handled by *Uniserve Nexus*.</p>
+                </div>
+
+                <!-- Service Card 4: Dedicated Talent Ecosystem -->
+                <div class="flex-none w-11/12 sm:w-80 lg:w-96 p-5 snap-center bg-secondary-dark rounded-xl card-glow">
+                    <img src="https://placehold.co/400x250/101010/00BFFF?text=DEDICATED+NURTURING" onerror="this.onerror=null; this.src='https://placehold.co/400x250/101010/00BFFF?text=DEDICATED+NURTURING';" alt="Dedicated Talent Ecosystem" class="w-full h-auto rounded-lg mb-4 object-cover border border-accent-blue/20">
+                    <h3 class="text-xl font-bold mb-2 text-accent-blue">4. Dedicated Talent Nurturing</h3>
+                    <p class="text-sm text-text-muted">Sourcing, training, and retaining elite, specialized talent dedicated solely to the success and continuous improvement of your managed processes.</p>
+                </div>
+                
+                <!-- CONTACT US CARD (Action Card) -->
+                <div class="flex-none w-11/12 sm:w-80 lg:w-96 p-6 snap-center bg-accent-blue rounded-xl shadow-2xl shadow-accent-blue/50 flex flex-col justify-center items-center text-center transition duration-300 transform hover:scale-[1.05]">
+                    <h3 class="text-2xl font-extrabold mb-3 text-primary-dark">Ready for Partnership?</h3>
+                    <p class="text-lg mb-6 text-primary-dark/90">
+                        Secure your profitability and discuss the hand-off of your operational complexity.
+                    </p>
+                    <a href="#contact" class="inline-block px-8 py-3 bg-primary-dark text-accent-blue font-bold rounded-lg shadow-lg hover:bg-gray-900 transition duration-300">
+                        Initiate Consultation
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Why Choose Us (Checklist) -->
+    <section id="why-choose-us" class="py-16 md:py-20 bg-secondary-dark border-b border-accent-blue/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-10 text-text-light text-center">
+                The <span class="text-highlight-blue">Uniserve Nexus</span> Commitment: <span class="text-accent-blue">The Mother's Guarantee</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8 max-w-5xl mx-auto">
+                <!-- Checklist Item 1 -->
+                <div class="flex items-start p-4 rounded-xl bg-primary-dark border border-accent-blue/20 shadow-xl transition duration-300 hover:border-accent-blue">
+                    <svg class="w-6 h-6 text-highlight-blue mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <p class="text-lg text-text-light">*Unwavering Stability:* We ensure continuous service and seamless transition, providing the security and stability your business needs to thrive.</p>
+                </div>
+                <!-- Checklist Item 2 -->
+                <div class="flex items-start p-4 rounded-xl bg-primary-dark border border-accent-blue/20 shadow-xl transition duration-300 hover:border-accent-blue">
+                    <svg class="w-6 h-6 text-highlight-blue mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <p class="text-lg text-text-light">*Profit-Centric KPIs:* Our performance is measured against your financial success, driving both cost reduction and revenue acceleration.</p>
+                </div>
+                <!-- Checklist Item 3 -->
+                <div class="flex items-start p-4 rounded-xl bg-primary-dark border border-accent-blue/20 shadow-xl transition duration-300 hover:border-accent-blue">
+                    <svg class="w-6 h-6 text-highlight-blue mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <p class="text-lg text-text-light">*Total Operational Transparency:* Clear, continuous reporting and accountability on every metric of the managed process.</p>
+                </div>
+                <!-- Checklist Item 4 -->
+                <div class="flex items-start p-4 rounded-xl bg-primary-dark border border-accent-blue/20 shadow-xl transition duration-300 hover:border-accent-blue">
+                    <svg class="w-6 h-6 text-highlight-blue mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <p class="text-lg text-text-light">*Dedicated Nurturing:* We treat your process with the relentless care and forward planning necessary for assured, long-term success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Footer & Contact Form -->
+    <footer id="contact" class="bg-primary-dark text-text-light py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-3xl font-bold mb-4 text-accent-blue">
+                Initiate Your Diligent Partnership
+            </h3>
+            <p class="mb-6 text-text-muted text-lg">
+                Let’s schedule a consultation to map out your high-performance, intelligence-driven strategy.
+            </p>
+            
+            <!-- Simple Contact Form -->
+            <div class="max-w-xl mx-auto space-y-4">
+                <input type="email" placeholder="Your Work Email Address" class="w-full p-3 rounded-lg bg-secondary-dark border border-accent-blue/30 text-white focus:ring-2 focus:ring-accent-blue focus:outline-none shadow-lg">
+                <textarea placeholder="Tell us about the processes you need managed..." rows="3" class="w-full p-3 rounded-lg bg-secondary-dark border border-accent-blue/30 text-white focus:ring-2 focus:ring-accent-blue focus:outline-none shadow-lg"></textarea>
+                <button type="submit" class="w-full px-10 py-3 bg-accent-blue hover:bg-blue-500 text-primary-dark font-bold rounded-lg shadow-xl shadow-accent-blue/30 transition duration-300">
+                    Submit Inquiry
+                </button>
+            </div>
+
+            <!-- DIRECT EMAIL ADDRESS -->
+            <div class="mt-8">
+                <p class="text-sm text-text-muted mb-2">Or connect instantly via email:</p>
+                <a href="mailto:info@uniservenexus.com" class="text-lg font-semibold text-accent-blue hover:text-blue-400 transition duration-300">info@uniservenexus.com</a>
+            </d
