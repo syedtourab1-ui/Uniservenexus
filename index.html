@@ -265,16 +265,33 @@
             </p>
             
             <!-- Simple Contact Form -->
-            <div class="max-w-xl mx-auto space-y-4">
-                <input type="email" placeholder="Your Work Email Address" class="w-full p-3 rounded-lg bg-secondary-dark border border-accent-blue/30 text-white focus:ring-2 focus:ring-accent-blue focus:outline-none shadow-lg">
-                <textarea placeholder="Tell us about the processes you need managed..." rows="3" class="w-full p-3 rounded-lg bg-secondary-dark border border-accent-blue/30 text-white focus:ring-2 focus:ring-accent-blue focus:outline-none shadow-lg"></textarea>
-                <button type="submit" class="w-full px-10 py-3 bg-accent-blue hover:bg-blue-500 text-primary-dark font-bold rounded-lg shadow-xl shadow-accent-blue/30 transition duration-300">
+           <form 
+                target="_self" 
+                action="https://docs.google.com/forms/d/e/1FAIpQLSdQRRra5-85GT477GvzurA4m5ITwbcXW_HcAcKqATyh2SJ5Qg/formResponse" 
+                method="POST" 
+                class="max-w-xl mx-auto space-y-4">
+                
+                <input 
+                    type="email" 
+                    name="entry.1713480728"  placeholder="Your Work Email Address" 
+                    required
+                    class="w-full p-3 rounded-lg bg-secondary-dark border border-accent-blue/30 text-white focus:ring-2 focus:ring-accent-blue focus:outline-none shadow-lg">
+                
+                <textarea 
+                    name="entry.869063778"  placeholder="Tell us about the processes you need managed..." 
+                    rows="3" 
+                    required
+                    class="w-full p-3 rounded-lg bg-secondary-dark border border-accent-blue/30 text-white focus:ring-2 focus:ring-accent-blue focus:outline-none shadow-lg"></textarea>
+                
+                <button 
+                    type="submit" 
+                    class="w-full px-10 py-3 bg-accent-blue hover:bg-blue-500 text-primary-dark font-bold rounded-lg shadow-xl shadow-accent-blue/30 transition duration-300 cta-pulse">
                     Submit Inquiry
                 </button>
-            </div>
-
+            </form>
             <!-- DIRECT EMAIL ADDRESS -->
             <div class="mt-8">
                 <p class="text-sm text-text-muted mb-2">Or connect instantly via email:</p>
                 <a href="mailto:info@uniservenexus.com" class="text-lg font-semibold text-accent-blue hover:text-blue-400 transition duration-300">info@uniservenexus.com</a>
             </d
+
