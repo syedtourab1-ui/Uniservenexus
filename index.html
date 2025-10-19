@@ -28,6 +28,83 @@
         }
     </script>
     <style>
+/* --- UPDATED ACCORDION SPECIFIC STYLES --- */
+    .accordion-card {
+        list-style: none;
+        margin: 0;
+        padding: 0; 
+        border-radius: 10px; /* Slightly more rounded corners */
+        overflow: hidden; 
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        box-shadow: 0 0 15px rgba(0, 191, 255, 0.1); /* Initial subtle blue glow */
+    }
+    .accordion-card:before { display: none; } /* Hides default marker */
+
+    .accordion-card:hover {
+        transform: translateY(-5px); /* Lift effect on hover */
+        box-shadow: 0 0 25px rgba(0, 191, 255, 0.4), 0 0 50px rgba(0, 191, 255, 0.15); /* Stronger glow on hover */
+    }
+
+    /* CARD HEADER (The clickable bar) */
+    .card-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 25px; /* More padding */
+        background-color: #1a1a1a; /* Slightly darker than secondary-dark */
+        color: #E0E0E0; /* Lighter text for contrast */
+        font-size: 1.15em; /* Slightly larger font */
+        font-weight: 600; /* Bolder text */
+        cursor: pointer;
+        transition: background-color 0.2s, color 0.2s;
+        border-bottom: 1px solid rgba(0, 191, 255, 0.2); /* Subtle blue border */
+    }
+    .card-title:hover {
+        background-color: #2a2a2a !important; /* Even darker on hover */
+        color: #33FFFF !important; /* Highlight blue on hover */
+    }
+    /* Style for the text part inside the summary */
+    .card-title .text {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Space between icon and text */
+    }
+
+    /* CHEVRON ICON (The V on the right) */
+    .chevron {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 8px 5px 0 5px;
+        border-color: #00BFFF transparent transparent transparent; 
+        transition: transform 0.3s, border-color 0.3s;
+    }
+
+    /* Rotate the chevron and change color when the card is open */
+    .accordion-card[open] .chevron {
+        transform: rotate(180deg);
+        border-color: #33FFFF transparent transparent transparent; /* Brighter blue when open */
+    }
+    .accordion-card[open] .card-title {
+        color: #33FFFF !important; /* Text also highlights when open */
+    }
+
+
+    /* CONTENT AREA (The dropdown content) */
+    .card-content {
+        padding: 20px 25px; /* Match padding */
+        background-color: #101010; /* Secondary dark for content */
+        color: #a0a0a0; /* Muted text for details */
+        line-height: 1.7;
+        font-size: 0.95em;
+        border-top: none; /* Removed redundant top border */
+    }
+    .card-content strong {
+        color: #33FFFF; /* Highlight key words in content */
+    }
+<style>
+    <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
         
         /* Utility to hide scrollbar while maintaining scroll functionality */
@@ -358,6 +435,69 @@
 
     </div>
 </section>
+  <section id="core-advantage" class="py-16 md:py-24 bg-primary-dark border-b border-accent-blue/20">
+    <div class="max-w-xl lg:max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-4 text-text-light">
+            Results You Can Expect: <span class="text-accent-blue">The Core Advantage</span>
+        </h2>
+        <p class="summary-text text-center text-lg text-text-muted mb-10 max-w-2xl mx-auto">
+            Stop trading time for results. We are engineered for *maximum speed and profitability*, ensuring your team works more efficiently and captures more value than with any other solution.
+        </p>
+
+        <div class="accordion-list space-y-4">
+            
+            <details class="accordion-card">
+                <summary class="card-title">
+                    <span class="text">
+                        💰 *GUARANTEED PROFIT* | Optimize spend for *Maximized Return ($X: $1)*
+                    </span>
+                    <span class="chevron"></span>
+                </summary>
+                <div class="card-content">
+                    Our solutions are designed to deliver a proven *$X return for every $1 invested*, turning your operational spend into a powerful profit engine.
+                </div>
+            </details>
+
+            <details class="accordion-card">
+                <summary class="card-title">
+                    <span class="text">
+                        ⚡ *ZERO DOWNTIME* | Superior performance under *Peak Load*
+                    </span>
+                    <span class="chevron"></span>
+                </summary>
+                <div class="card-content">
+                    Our platform handles *high-volume transactions and peak loads effortlessly*, ensuring zero downtime and continuous performance when your business needs it most.
+                </div>
+            </details>
+
+            <details class="accordion-card">
+                    <summary class="card-title">
+                        <span class="text">
+                            ⚙️ *ELIMINATE ERRORS* | Engineered for *Unmatched Operational Efficiency*
+                        </span>
+                        <span class="chevron"></span>
+                    </summary>
+                <div class="card-content">
+                    Achieve true *operational efficiency* with automated workflows that eliminate manual errors, allowing your team to focus 100% on strategic growth.
+                </div>
+            </details>
+            
+            <details class="accordion-card">
+                <summary class="card-title">
+                    <span class="text">
+                        ⏱️ *50% GREATER OUTPUT* | Optimal Productivity Per *Team Hour*
+                    </span>
+                    <span class="chevron"></span>
+                </summary>
+                <div class="card-content">
+                    Say goodbye to manual bottlenecks. By digitizing key processes, you can achieve *50% greater output* from your existing team every single hour.
+                </div>
+            </details>
+
+        </div>
+    </div>
+</section>  
     
     <!-- 5. Footer & Contact Form -->
     <footer id="contact" class="bg-primary-dark text-text-light py-12">
@@ -430,6 +570,7 @@
     
 </body> 
 </html>
+
 
 
 
