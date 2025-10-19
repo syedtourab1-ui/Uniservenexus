@@ -398,8 +398,38 @@
             <div class="mt-8">
                 <p class="text-sm text-text-muted mb-2">Or connect instantly via email:</p>
                 <a href="mailto:info@uniservenexus.com" class="text-lg font-semibold text-accent-blue hover:text-blue-400 transition duration-300">info@uniservenexus.com</a>
-            </d
+            </div>
+    </section>
+    
+    <script>
+        // 1. Get the main container element
+        const serviceContainer = document.getElementById('service-container');
+        // 2. Get the navigation buttons
+        const prevButton = document.getElementById('prev-service');
+        const nextButton = document.getElementById('next-service');
 
+        // 3. Define the scroll amount (adjust 450 if you want it to jump more or less)
+        const scrollAmount = 450; 
+
+        // 4. Add the event listener for the NEXT button
+        nextButton.addEventListener('click', () => {
+            serviceContainer.scrollBy({
+                left: scrollAmount, // Positive value scrolls right
+                behavior: 'smooth' 
+            });
+        });
+
+        // 5. Add the event listener for the PREVIOUS button
+        prevButton.addEventListener('click', () => {
+            serviceContainer.scrollBy({
+                left: -scrollAmount, // Negative value scrolls left
+                behavior: 'smooth'
+            });
+        });
+    </script>
+    
+</body> 
+</html>
 
 
 
